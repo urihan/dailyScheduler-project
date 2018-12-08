@@ -1,0 +1,119 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+struct event
+{
+  string event;
+  event(); //contstructor
+
+};
+
+
+event()
+{
+  int day[24]; // the day is 12 hours and if we do 30 min increments then it would be an array of size 24
+  for (int i = 0; i < 24; i++)
+  {
+    day[i] = 0; //this is setting all the values in the array to zero so that they are all set as true first
+    //then if later we change the array to 1 it means false as in there is an event during that time
+  }
+}
+
+int main()
+{
+
+  ofstream user_scheduler("user_scheduler.txt");
+
+  //timeSlot t;
+  // t.storeInfo(8,30,"am","Physics");
+  // t.storeInfo(10,30,"am","Chemistry");
+  string input;
+  string name;
+  string startTime1;
+  string startTime2;
+  string endTime1;
+  string endTime2;
+  string appointment;
+  string ampm;
+
+  cout << "Welcome to your daily scheduler! " <<endl; //put in line 1 name of person
+  cout <<"Enter your name: " <<endl;
+  getline(cin, name);
+  user_scheduler <<"Name: " <<name <<endl;
+  cout << " ------------- Main Menu ------------- " <<endl;
+  cout << "1. Enter Info " <<endl;
+  cout << "2. View Schedule " <<endl;
+  cout << "3. Get Recommendations " <<endl;
+  cout << "4. Quit" <<endl;
+
+
+  while (input != "4")
+  {
+    getline(cin, input); //maybe use getline instead?
+    if (input != "1" && input != "2" && input != "3" && input != "4")
+    {
+      cout <<"Invalid Input! Please enter 1, 2, 3, or 4 to quit. \n Thank you!" <<endl;
+    }
+    if (input == "1")
+    {
+      cout <<"Welcome, " <<name <<"." <<endl;
+      cout <<"Please enter your schedule: " <<endl;
+      cout <<"What time (hours) is your appointment? " <<endl;
+      getline(cin, startTime1);
+      user_scheduler <<"Start Time(hours): " <<startTime1 <<endl;
+
+      cout <<"What time (minutes) is your appointment? " <<endl;
+      getline(cin, startTime2);
+
+      user_scheduler <<"Start Time(minutes): " <<startTime2 <<endl;
+
+      cout <<"What time (hours) does your appointment end? " <<endl;
+      getline(cin, endTime1);
+
+      user_scheduler <<"End Time(hours): " <<endTime1 <<endl;
+
+      cout <<"What time minutes) does your appointment end? " <<endl;
+      getline(cin, endTime2);
+
+      user_scheduler <<"End Time(minutes): " <<endTime2 <<endl;
+
+      cout <<"Is it in the morning or afternoon? (Enter am/pm) " <<endl;
+      getline(cin, ampm);
+
+      user_scheduler <<"AM/PM " <<ampm <<endl;
+
+      cout <<"What do you have scheduled at " <<startTime1 <<":" <<startTime2 <<ampm <<" ?" <<endl;
+      getline(cin, appointment);
+
+      user_scheduler <<"Appointment: " <<appointment <<endl;
+
+    //   t.list->startHours = stoi(startTime1);
+    //   t.list->startMins = stoi(startTime2);
+    //   t.list->endHours = stoi(endTime1);
+    //   t.list->endMins = stoi(endTime2);
+    //   t.list->event = appointment;
+    //   t.list->ampm = ampm;
+    //
+    //   t.storeInfo(t.list);
+    //   t.enqueue(t.list);
+    //
+    // }
+    // if (input == "2")
+    // {
+    //   cout <<"Welcome, " <<name <<"." <<endl;
+    //   cout <<" ------------- Schedule ------------- " <<endl;
+    //   t.storeInfo(t.list);
+      //t.storeInfo(8,30,"am","Physics");
+      //t.storeInfo(10,30,"am","Chemistry");
+    }//SEG FAULTS HERE -----------
+    // if (input == "3")
+    // {
+    //   cout <<"Your freetime: " <<endl;
+    //   t.freeTime(t.list);
+    // }
+  }
+
+}
