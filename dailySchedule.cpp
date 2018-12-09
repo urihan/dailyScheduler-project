@@ -48,7 +48,64 @@ void timeSlot::getRecommendations(int i)
     cout <<eventArray[i].event <<endl;
   }
 
+void setRecommendations()
+{
+  eventArray[0].event = "Physics Colloquium";
+  eventArray[0].occupied = true;
+  eventArray[0].startHours = 8;
+  eventArray[0].endHours=9;
+  eventArray[0].ampm= "am";
 
+  eventArray[1].event = "Physics Colloquium";
+  eventArray[1].occupied = true;
+  eventArray[1].startHours = 8;
+  eventArray[1].endHours=9;
+  eventArray[1].ampm= "am";
+
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[2].ampm= "am";
+
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[2].ampm= "am";
+
+  
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[2].ampm= "am";
+
+  
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[2].ampm= "am";
+
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[2].ampm= "am";
+
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[2].ampm= "am";
+
+  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].occupied = true;
+  eventArray[2].startHours = 8;
+  eventArray[2].endHours=9;
+  eventArray[8].ampm= "am";
+}
 
 bool timeSlot::scheduleArray(timeInfo slot)
 {
