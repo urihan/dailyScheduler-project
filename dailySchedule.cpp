@@ -9,8 +9,15 @@ using namespace std;
 
 timeSlot::timeSlot(){
 
-  for(int i; i<boolArray[maxsize];i++){
-    boolArray[i]=true;
+  for(int i; i<8;i++)
+  {
+    boolArray[i].startHours = 0;
+    boolArray[i].startMins = 0;
+    boolArray[i].endHours = 0;
+    boolArray[i].endMins = 0;
+    boolArray[i].event = NULL;
+    boolArray[i].ampm = NULL:
+    boolArray[i].occupied = false; 
   }
 
 }
