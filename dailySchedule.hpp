@@ -17,7 +17,7 @@ struct timeInfo{
   // string endam;
   // string endpm;
 };
- 
+
 class timeSlot
 {
 private:
