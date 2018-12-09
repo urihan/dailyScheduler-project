@@ -15,7 +15,7 @@ timeSlot::timeSlot(){
     boolArray[i].startHours = 0;
     boolArray[i].endHours=0;
     boolArray[i].ampm=" ";
-    
+
     eventArray[i].event = " ";
     eventArray[i].occupied = false;
     eventArray[i].startHours = 0;
@@ -38,86 +38,84 @@ for(int i=0; i<8; i++)
 
 }
 
+void timeSlot::setRecommendations()
+{
+    eventArray[0].event = "Physics Colloquium";
+    eventArray[0].occupied = true;
+    eventArray[0].startHours = 8;
+    eventArray[0].endHours=9;
+    eventArray[0].ampm= "am";
+
+    eventArray[1].event = "Chemistry Colloquium";
+    eventArray[1].occupied = true;
+    eventArray[1].startHours = 9;
+    eventArray[1].endHours=10;
+    eventArray[1].ampm= "am";
+
+    eventArray[2].event = "Data Structures Colloquium";
+    eventArray[2].occupied = true;
+    eventArray[2].startHours = 10;
+    eventArray[2].endHours=11;
+    eventArray[2].ampm= "am";
+
+    eventArray[3].event = "Rock Climbing Club";
+    eventArray[3].occupied = true;
+    eventArray[3].startHours = 11;
+    eventArray[3].endHours=12;
+    eventArray[3].ampm= "am";
 
 
+    eventArray[4].event = "Golf Club";
+    eventArray[4].occupied = true;
+    eventArray[4].startHours = 12;
+    eventArray[4].endHours=1;
+    eventArray[4].ampm= "am";
 
 
+    eventArray[5].event = "Cooking Club";
+    eventArray[5].occupied = true;
+    eventArray[5].startHours = 1;
+    eventArray[5].endHours= 2;
+    eventArray[5].ampm= "am";
+
+    eventArray[6].event = "Shayon Gupta's Office Hours (CSCI 2270)";
+    eventArray[6].occupied = true;
+    eventArray[6].startHours = 2;
+    eventArray[6].endHours=3;
+    eventArray[6].ampm= "am";
+
+    eventArray[7].event = "CU Men's Basketball Game";
+    eventArray[7].occupied = true;
+    eventArray[7].startHours = 3 ;
+    eventArray[7].endHours= 4;
+    eventArray[7].ampm= "am";
+
+    eventArray[8].event = "CU Women's Volleyball Game";
+    eventArray[8].occupied = true;
+    eventArray[8].startHours = 4;
+    eventArray[8].endHours= 5;
+    eventArray[8].ampm= "am";
+}
 void timeSlot::getRecommendations(int i)
   {
     cout <<"Here is an event that you could go to during your free time!" <<endl;
-    cout <<eventArray[i].event <<endl;
+    cout <<"At "<< eventArray[i].startHours << " go to: "<< eventArray[i].event <<endl <<endl;
   }
 
-void setRecommendations()
-{
-  eventArray[0].event = "Physics Colloquium";
-  eventArray[0].occupied = true;
-  eventArray[0].startHours = 8;
-  eventArray[0].endHours=9;
-  eventArray[0].ampm= "am";
-
-  eventArray[1].event = "Chemistry Colloquium";
-  eventArray[1].occupied = true;
-  eventArray[1].startHours = 9;
-  eventArray[1].endHours=10;
-  eventArray[1].ampm= "am";
-
-  eventArray[2].event = "Data Structures Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 10;
-  eventArray[2].endHours=11;
-  eventArray[2].ampm= "am";
-
-  eventArray[3].event = "Rock Climbing Club";
-  eventArray[3].occupied = true;
-  eventArray[3].startHours = 11;
-  eventArray[3].endHours=12;
-  eventArray[3].ampm= "am";
 
 
-  eventArray[4].event = "Golf Club";
-  eventArray[4].occupied = true;
-  eventArray[4].startHours = 12;
-  eventArray[4].endHours=1;
-  eventArray[4].ampm= "am";
-
-
-  eventArray[5].event = "Cooking Club";
-  eventArray[5].occupied = true;
-  eventArray[5].startHours = 1;
-  eventArray[5].endHours= 2;
-  eventArray[5].ampm= "am";
-
-  eventArray[6].event = "Shayon Gupta's Office Hours (CSCI 2270)";
-  eventArray[6].occupied = true;
-  eventArray[6].startHours = 2;
-  eventArray[6].endHours=3;
-  eventArray[6].ampm= "am";
-
-  eventArray[7].event = "CU Men's Basketball Game";
-  eventArray[7].occupied = true;
-  eventArray[7].startHours = 3 ;
-  eventArray[7].endHours= 4;
-  eventArray[7].ampm= "am";
-
-  eventArray[8].event = "CU Women's Volleyball Game";
-  eventArray[8].occupied = true;
-  eventArray[8].startHours = 4;
-  eventArray[8].endHours= 5;
-  eventArray[8].ampm= "am";
-}
-void timeSlot::scheduleArray()
-{
-  for(int i; i<8; i++)
+  void timeSlot::scheduleArray()
   {
-    if(boolArray[i].occupied == false)
+    for(int i=0; i<8; i++)
     {
-      cout <<"You have a free hour at " <<boolArray[i].startHours <<"!" << endl;
-      getRecommendations(i);
+      if(boolArray[i].occupied == false)
+      {
+
+        cout <<"You have a free hour at " <<eventArray[i].startHours <<"!" << endl;
+        getRecommendations(i);
+      }
     }
   }
-}
-
 
 
 // int ampmCalculation(timeInfo slot){
@@ -144,6 +142,7 @@ int main()
   timeSlot t;
   int i=0;
   // timeInfo slot;
+  t.setRecommendations();
 
   string input;
   string name;
@@ -262,7 +261,8 @@ int main()
 
     if(input == "3")
     {
-      // cout <<
+      cout << "These are the events that you could attend" << endl;
+      t.scheduleArray();
     }
 
 
