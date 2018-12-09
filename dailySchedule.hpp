@@ -36,10 +36,10 @@ public:
   //functions
   void storeInfo(timeInfo slot);
   bool scheduleArray(timeInfo slot);
-  
+
 
   int freeTime(timeInfo* slot);
-  void recommendation();
+  void getRecommendations(int);
 
 };
 
