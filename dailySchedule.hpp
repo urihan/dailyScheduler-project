@@ -35,7 +35,7 @@ public:
 
   //functions
   void storeInfo(timeInfo slot);
-  bool scheduleArray(timeInfo slot);
+  void scheduleArray();
 
 
   int freeTime(timeInfo* slot);
