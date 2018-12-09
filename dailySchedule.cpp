@@ -25,6 +25,13 @@ timeSlot::timeSlot(){
 
 }
 
+void getRecommendations(int i)
+{
+  cout <<"Here is an event that you could go to during your free time!" <<endl; 
+  cout <<eventArray[i].event <<endl; 
+}
+
+
   void timeSlot::storeInfo(timeInfo slot)
   {
     cout << "Here is your schedule for today!" << endl;
