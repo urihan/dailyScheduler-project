@@ -106,18 +106,16 @@ void setRecommendations()
   eventArray[8].endHours= 5;
   eventArray[8].ampm= "am";
 }
-bool timeSlot::scheduleArray(timeInfo slot)
+void timeSlot::scheduleArray(timeInfo slot)
 {
   for(int i; i<8; i++)
   {
     if(boolArray[i].occupied == false)
     {
-      cout <<"you have a schedule" << endl;
-
+      cout <<"You have a free hour!" << endl;
       getRecommendations(i);
     }
   }
-  return true;
 }
 
 
