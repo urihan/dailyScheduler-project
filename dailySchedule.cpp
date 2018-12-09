@@ -15,8 +15,8 @@ timeSlot::timeSlot(){
     boolArray[i].startMins = 0;
     boolArray[i].endHours = 0;
     boolArray[i].endMins = 0;
-    boolArray[i].event = NULL;
-    boolArray[i].ampm = NULL:
+    boolArray[i].event = " ";
+    boolArray[i].ampm = " ":
     boolArray[i].occupied = false; 
   }
 
