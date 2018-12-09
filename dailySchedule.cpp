@@ -56,57 +56,56 @@ void setRecommendations()
   eventArray[0].endHours=9;
   eventArray[0].ampm= "am";
 
-  eventArray[1].event = "Physics Colloquium";
+  eventArray[1].event = "Chemistry Colloquium";
   eventArray[1].occupied = true;
-  eventArray[1].startHours = 8;
-  eventArray[1].endHours=9;
+  eventArray[1].startHours = 9;
+  eventArray[1].endHours=10;
   eventArray[1].ampm= "am";
 
-  eventArray[2].event = "Physics Colloquium";
+  eventArray[2].event = "Data Structures Colloquium";
   eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
+  eventArray[2].startHours = 10;
+  eventArray[2].endHours=11;
   eventArray[2].ampm= "am";
 
-  eventArray[2].event = "Physics Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
-  eventArray[2].ampm= "am";
+  eventArray[3].event = "Rock Climbing Club";
+  eventArray[3].occupied = true;
+  eventArray[3].startHours = 11;
+  eventArray[3].endHours=12;
+  eventArray[3].ampm= "am";
 
-  
-  eventArray[2].event = "Physics Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
-  eventArray[2].ampm= "am";
 
-  
-  eventArray[2].event = "Physics Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
-  eventArray[2].ampm= "am";
+  eventArray[4].event = "Golf Club";
+  eventArray[4].occupied = true;
+  eventArray[4].startHours = 12;
+  eventArray[4].endHours=1;
+  eventArray[4].ampm= "am";
 
-  eventArray[2].event = "Physics Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
-  eventArray[2].ampm= "am";
 
-  eventArray[2].event = "Physics Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
-  eventArray[2].ampm= "am";
+  eventArray[5].event = "Cooking Club";
+  eventArray[5].occupied = true;
+  eventArray[5].startHours = 1;
+  eventArray[5].endHours= 2;
+  eventArray[5].ampm= "am";
 
-  eventArray[2].event = "Physics Colloquium";
-  eventArray[2].occupied = true;
-  eventArray[2].startHours = 8;
-  eventArray[2].endHours=9;
+  eventArray[6].event = "Shayon Gupta's Office Hours (CSCI 2270)";
+  eventArray[6].occupied = true;
+  eventArray[6].startHours = 2;
+  eventArray[6].endHours=3;
+  eventArray[6].ampm= "am";
+
+  eventArray[7].event = "CU Men's Basketball Game";
+  eventArray[7].occupied = true;
+  eventArray[7].startHours = 3 ;
+  eventArray[7].endHours= 4;
+  eventArray[7].ampm= "am";
+
+  eventArray[8].event = "CU Women's Volleyball Game";
+  eventArray[8].occupied = true;
+  eventArray[8].startHours = 4;
+  eventArray[8].endHours= 5;
   eventArray[8].ampm= "am";
 }
-
 bool timeSlot::scheduleArray(timeInfo slot)
 {
   for(int i; i<8; i++)
