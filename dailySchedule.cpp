@@ -15,6 +15,12 @@ timeSlot::timeSlot(){
     boolArray[i].startHours = 0;
     boolArray[i].endHours=0;
     boolArray[i].ampm=" ";
+    
+    eventArray[i].event = " ";
+    eventArray[i].occupied = false;
+    eventArray[i].startHours = 0;
+    eventArray[i].endHours=0;
+    eventArray[i].ampm=" ";
   }
 
 }
