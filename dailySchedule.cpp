@@ -15,57 +15,48 @@ timeSlot::timeSlot(){
     boolArray[i].startHours = 0;
     boolArray[i].endHours=0;
     boolArray[i].ampm=" ";
-    
-    eventArray[i].event = " ";
-    eventArray[i].occupied = false;
-    eventArray[i].startHours = 0;
-    eventArray[i].endHours=0;
-    eventArray[i].ampm=" ";
   }
 
 }
-
-void getRecommendations(int i)
+void timeSlot::storeInfo(timeInfo slot)
 {
-  cout <<"Here is an event that you could go to during your free time!" <<endl; 
-  cout <<eventArray[i].event <<endl; 
+cout << "Here is your schedule for today!" << endl;
+
+for(int i=0; i<8; i++)
+{
+  if(boolArray[i].occupied == true)
+  {
+    cout<< "At "<< boolArray[i].startHours << ", you have: " << boolArray[i].event << endl;
+  }
+}
+
 }
 
 
-    void timeSlot::storeInfo(timeInfo slot)
+
+
+
+void timeSlot::getRecommendations(int i)
   {
-    cout << "Here is your schedule for today!" << endl;
-
-    for(int i=0; i<8; i++)
-    {
-      if(boolArray[i].occupied == true)
-      {
-        cout<< "At "<< boolArray[i].startHours << ", you have: " << boolArray[i].event << endl;
-      }
-    }
-
+    cout <<"Here is an event that you could go to during your free time!" <<endl;
+    cout <<eventArray[i].event <<endl;
   }
 
 
 
-//
-// bool timeSlot::scheduleArray(timeInfo slot)
-// {
-//   bool empty = true;
-//   for(int i; i<8; i++)
-//   {
-//     boolArray[i]=empty;
-//     if(!empty)
-//     {
-//       cout <<"you have a schedule" << endl;
-//       empty = false;
-//       boolArray[i]=empty;
-//       string key = gettingKey(slot);
-//     }
-//   }
-//   return empty;
-// }
-//
+bool timeSlot::scheduleArray(timeInfo slot)
+{
+  for(int i; i<8; i++)
+  {
+    if(boolArray[i].occupied == false)
+    {
+      cout <<"you have a schedule" << endl;
+
+      getRecommendations(i);
+    }
+  }
+  return true;
+}
 
 
 
@@ -85,7 +76,6 @@ void getRecommendations(int i)
 
 
 
-// void timeSlot::mainMenu(){}
 
 int main()
 {
@@ -129,20 +119,25 @@ int main()
     {
       cout <<"Welcome, " <<name <<"." <<endl;
       cout <<"Please enter your schedule: " <<endl;
+
       cout <<"What time (hours) is your appointment? " <<endl;
-      getline(cin, startTime1);
-      if (stoi(startTime1) != 8 || stoi(startTime1) != 9 ||stoi(startTime1) != 10 ||stoi(startTime1) != 11 ||stoi(startTime1) != 12 ||stoi(startTime1) != 1 ||stoi(startTime1) != 2 ||stoi(startTime1) != 3 ||stoi(startTime1) != 4)
-      {
-        cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
-      }
+      getline(cin,startTime1);
+      // while (stoi(startTime1) != 8 || stoi(startTime1) != 9 ||stoi(startTime1) != 10 ||stoi(startTime1) != 11 ||stoi(startTime1) != 12 ||stoi(startTime1) != 1 ||stoi(startTime1) != 2 ||stoi(startTime1) != 3 || stoi(startTime1) != 4)
+      // {
+      //   cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
+      //   cout <<"What time (hours) is your appointment? " <<endl;
+      //   getline(cin, startTime1);
+      // }
       user_scheduler <<"Start Time(hours): " <<startTime1 <<endl;
 
       cout <<"What time (hours) does your appointment end? " <<endl;
-      getline(cin, endTime1);
-      if (stoi(startTime1) != 8 || stoi(startTime1) != 9 ||stoi(startTime1) != 10 ||stoi(startTime1) != 11 ||stoi(startTime1) != 12 ||stoi(startTime1) != 1 ||stoi(startTime1) != 2 ||stoi(startTime1) != 3 ||stoi(startTime1) != 4)
-      {
-        cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
-      }
+      getline(cin,endTime1);
+      // while (stoi(endTime1) != 8 || stoi(endTime1) != 9 ||stoi(endTime1) != 10 ||stoi(endTime1) != 11 ||stoi(endTime1) != 12 ||stoi(endTime1) != 1 ||stoi(endTime1) != 2 ||stoi(endTime1) != 3 ||stoi(endTime1) != 4)
+      // {
+      //   cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
+      //   cout <<"What time (hours) does your appointment end? " <<endl;
+      //   getline(cin, endTime1);
+      // }
 
       user_scheduler <<"End Time(hours): " <<endTime1 <<endl;
 
@@ -193,6 +188,7 @@ int main()
         t.boolArray[i].endHours = stoi(endTime1);
         t.boolArray[i].event = appointment;
         t.boolArray[i].ampm = ampm;
+        t.boolArray[i].occupied = true;
         t.storeInfo(t.boolArray[i]);
 
     }
@@ -205,12 +201,11 @@ int main()
 
     }
 
-    //SEG FAULTS HERE -----------
-    // if (input == "3")
-    // {
-    //   cout <<"Your freetime: " <<endl;
-    //   t.freeTime(t.list);
-    // }
+    if(input == "3")
+    {
+      // cout <<
+    }
+
 
 
 }
