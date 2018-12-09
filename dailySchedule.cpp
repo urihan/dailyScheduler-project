@@ -127,9 +127,9 @@ int main()
 
   ofstream user_scheduler("user_scheduler.txt");
 
-  //timeSlot t;
-  // t.storeInfo(8,30,"am","Physics");
-  // t.storeInfo(10,30,"am","Chemistry");
+  timeSlot t;
+  timeInfo slot;
+
   string input;
   string name;
   string startTime1;
@@ -143,16 +143,18 @@ int main()
   cout <<"Enter your name: " <<endl;
   getline(cin, name);
   user_scheduler <<"Name: " <<name <<endl;
-  cout << " ------------- Main Menu ------------- " <<endl;
-  cout << "1. Enter Info " <<endl;
-  cout << "2. View Schedule " <<endl;
-  cout << "3. Get Recommendations " <<endl;
-  cout << "4. Quit" <<endl;
 
 
   while (input != "4")
   {
-    getline(cin, input); //maybe use getline instead?
+
+    cout << " ------------- Main Menu ------------- " <<endl;
+    cout << "1. Enter Info " <<endl;
+    cout << "2. View Schedule " <<endl;
+    cout << "3. Get Recommendations " <<endl;
+    cout << "4. Quit" <<endl;
+
+    getline(cin, input); 
     if (input != "1" && input != "2" && input != "3" && input != "4")
     {
       cout <<"Invalid Input! Please enter 1, 2, 3, or 4 to quit. \n Thank you!" <<endl;
@@ -190,12 +192,15 @@ int main()
 
       user_scheduler <<"Appointment: " <<appointment <<endl;
 
-    //   t.list->startHours = stoi(startTime1);
-    //   t.list->startMins = stoi(startTime2);
-    //   t.list->endHours = stoi(endTime1);
-    //   t.list->endMins = stoi(endTime2);
-    //   t.list->event = appointment;
-    //   t.list->ampm = ampm;
+      t.slot.startHours = stoi(startTime1);
+      t.slot.startMins = stoi(startTime2);
+      t.slot.endHours = stoi(endTime1);
+      t.slot.endMins = stoi(endTime2);
+      t.slot.event = appointment;
+      t.slot.ampm = ampm;
+
+       t.storeInfo(t.slot);
+
     //
     //   t.storeInfo(t.list);
     //   t.enqueue(t.list);
