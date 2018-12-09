@@ -143,7 +143,41 @@ int main()
       getline(cin, appointment);
 
       user_scheduler <<"Appointment: " <<appointment <<endl;
-
+      if (startTime1 = 8)
+      {
+        i = 0; 
+      }
+      if (startTime1 = 9)
+      {
+        i = 1; 
+      }
+      if (startTime1 = 10)
+      {
+        i = 2; 
+      }
+      if (startTime1 = 11)
+      {
+        i = 3; 
+      }if (startTime1 = 12)
+      {
+        i = 4; 
+      }
+      if (startTime1 = 1)
+      {
+        i = 5; 
+      }
+      if (startTime1 = 2)
+      {
+        i = 6; 
+      }
+      if (startTime1 = 3)
+      {
+        i = 7; 
+      }
+      if (startTime1 = 4)
+      {
+        i = 8; 
+      }
       t.boolArray[i].startHours = stoi(startTime1);
       t.boolArray[i].startMins = stoi(startTime2);
       t.boolArray[i].endHours = stoi(endTime1);
