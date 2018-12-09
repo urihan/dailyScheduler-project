@@ -8,7 +8,10 @@ using namespace std;
 
 
 timeSlot::timeSlot(){
-  //allocating the size?
+
+  for(int i; i<boolArray[maxsize];i++){
+    boolArray[i]=true;
+  }
 
 }
 
@@ -29,13 +32,69 @@ bool timeSlot::scheduleArray(timeInfo slot)
       cout <<"you have a schedule" << endl;
       empty = false;
       boolArray[i]=empty;
-      // store the item into the index
-      // boolArray[i]=storeInfo(slot);
+      storeInfo(slot);
     }
   }
   cout << empty << endl;
   return empty;
 }
+
+string gettingKey(timeInfo slot){
+  // function that fills in the array with the correct time interval
+  //getting the inputs
+
+  // for (int i; i<boolArray[maxsize];i++)
+  // {
+  //
+  // }
+
+  int stHrs = slot.startHours;
+  string sstHrs = to_string(stHrs);
+
+  int stMins = slot.startMins;
+  string sstMins = to_string(stMins);
+
+  int endHrs = slot.endHours;
+  string sendHrs = to_string(endHrs);
+
+  int endMins = slot.endMins;
+  string sendMins = to_string(endMins);
+
+  // int ampmvalue = ampmcalculation(slot);
+  //
+
+  string key = sstHrs+sstMins+sendHrs+sendMins;
+  return key;
+
+}
+
+// int ampmCalculation(timeInfo slot){
+//   //need to continue::
+//   //pm calculation:
+//   pm = (slot.startHours+11)-12;
+//
+//   if(pm==0)
+//   {
+//     return pm;
+//   }
+//   return pm;
+//
+// }
+
+
+int gettingValue(timeInfo slot){
+  string key = gettingKey(slot);
+  int value = stoi(key);
+  return value;
+}
+
+void timeSlot::hashfunction(timeInfo slot, string fkey, int fvalue){
+  fkey = gettingKey(slot);
+  fvalue = gettingValue(slot);
+  cout << fkey << ":" << fvalue << endl;
+
+}
+
 
 
 // void timeSlot::mainMenu(){}
@@ -43,6 +102,8 @@ bool timeSlot::scheduleArray(timeInfo slot)
 
 int main()
 {
+
+
   User user1;
   string name;
   list<timeSlot> events;
@@ -103,7 +164,8 @@ int main()
       t.slot.event = appointment;
       t.slot.ampm = ampm;
 
-      t.storeInfo(t.slot);
+
+      // t.storeInfo(t.slot);
 
       cout <<"Is that all for today? (y/n)" << endl;
       break;
@@ -117,7 +179,7 @@ int main()
       t.storeInfo(t.slot);
     }
 
-    t.scheduleArray(slot);
+    // t.scheduleArray(slot);
   }
 
 
