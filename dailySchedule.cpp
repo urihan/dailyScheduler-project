@@ -154,7 +154,7 @@ int main()
     cout << "3. Get Recommendations " <<endl;
     cout << "4. Quit" <<endl;
 
-    getline(cin, input); 
+    getline(cin, input);
     if (input != "1" && input != "2" && input != "3" && input != "4")
     {
       cout <<"Invalid Input! Please enter 1, 2, 3, or 4 to quit. \n Thank you!" <<endl;
@@ -198,32 +198,28 @@ int main()
       t.slot.endMins = stoi(endTime2);
       t.slot.event = appointment;
       t.slot.ampm = ampm;
-
        t.storeInfo(t.slot);
+    }
 
-    //
-    //   t.storeInfo(t.list);
-    //   t.enqueue(t.list);
-    //
-    // }
-    // if (input == "2")
-    // {
-    //   cout <<"Welcome, " <<name <<"." <<endl;
-    //   cout <<" ------------- Schedule ------------- " <<endl;
-    //   t.storeInfo(t.list);
-      //t.storeInfo(8,30,"am","Physics");
-      //t.storeInfo(10,30,"am","Chemistry");
-    }//SEG FAULTS HERE -----------
+    if (input == "2")
+    {
+      cout <<"Welcome, " <<name <<"." <<endl;
+      cout <<" ------------- Schedule ------------- " <<endl;
+      t.storeInfo(t.slot);
+
+    }
+
+    //SEG FAULTS HERE -----------
     // if (input == "3")
     // {
     //   cout <<"Your freetime: " <<endl;
     //   t.freeTime(t.list);
     // }
-  }
+
 
 }
 
-
+}
 
 
 
