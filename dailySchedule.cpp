@@ -13,9 +13,7 @@ timeSlot::timeSlot(){
     boolArray[i].event = " ";
     boolArray[i].occupied = false;
     boolArray[i].startHours = 0;
-    boolArray[i].startMins=0;
     boolArray[i].endHours=0;
-    boolArray[i].endMins=0;
     boolArray[i].ampm=" ";
   }
 
@@ -27,7 +25,7 @@ timeSlot::timeSlot(){
 
     for(int i=0; i<8; i++)
     {
-      cout<< "At "<< boolArray[i].startHours << ":" << boolArray[i].startMins << boolArray[i].ampm << ", you have: " << boolArray[i].event << endl;
+      cout<< "At "<< boolArray[i].startHours << ", you have: " << boolArray[i].event << endl;
     }
 
   }
@@ -119,72 +117,60 @@ int main()
       getline(cin, startTime1);
       user_scheduler <<"Start Time(hours): " <<startTime1 <<endl;
 
-      cout <<"What time (minutes) is your appointment? " <<endl;
-      getline(cin, startTime2);
-
-      user_scheduler <<"Start Time(minutes): " <<startTime2 <<endl;
-
       cout <<"What time (hours) does your appointment end? " <<endl;
       getline(cin, endTime1);
 
       user_scheduler <<"End Time(hours): " <<endTime1 <<endl;
 
-      cout <<"What time minutes) does your appointment end? " <<endl;
-      getline(cin, endTime2);
-
-      user_scheduler <<"End Time(minutes): " <<endTime2 <<endl;
-
-      cout <<"Is it in the morning or afternoon? (Enter am/pm) " <<endl;
-      getline(cin, ampm);
-
       user_scheduler <<"AM/PM " <<ampm <<endl;
 
-      cout <<"What do you have scheduled at " <<startTime1 <<":" <<startTime2 <<ampm <<" ?" <<endl;
+      cout <<"What do you have scheduled at " <<startTime1 <<ampm <<" ?" <<endl;
       getline(cin, appointment);
 
       user_scheduler <<"Appointment: " <<appointment <<endl;
-      if (startTime1 = 8)
-      {
-        i = 0; 
-      }
-      if (startTime1 = 9)
-      {
-        i = 1; 
-      }
-      if (startTime1 = 10)
-      {
-        i = 2; 
-      }
-      if (startTime1 = 11)
-      {
-        i = 3; 
-      }if (startTime1 = 12)
-      {
-        i = 4; 
-      }
-      if (startTime1 = 1)
-      {
-        i = 5; 
-      }
-      if (startTime1 = 2)
-      {
-        i = 6; 
-      }
-      if (startTime1 = 3)
-      {
-        i = 7; 
-      }
-      if (startTime1 = 4)
-      {
-        i = 8; 
-      }
-      t.boolArray[i].startHours = stoi(startTime1);
-      t.boolArray[i].startMins = stoi(startTime2);
-      t.boolArray[i].endHours = stoi(endTime1);
-      t.boolArray[i].endMins = stoi(endTime2);
-      t.boolArray[i].event = appointment;
-      t.boolArray[i].ampm = ampm;
-      t.storeInfo(t.boolArray[i]);
+
+        if (stoi(startTime1) == 8)
+          {
+            i = 0;
+          }
+          if (stoi(startTime1) == 9)
+          {
+            i = 1;
+          }
+          if (stoi(startTime1) == 10)
+          {
+            i = 2;
+          }
+          if (stoi(startTime1) == 11)
+          {
+            i = 3;
+          }if (stoi(startTime1) == 12)
+          {
+            i = 4;
+          }
+          if (stoi(startTime1) == 1)
+          {
+            i = 5;
+          }
+          if (stoi(startTime1) == 2)
+          {
+            i = 6;
+          }
+          if (stoi(startTime1) == 3)
+          {
+            i = 7;
+          }
+          if (stoi(startTime1) == 4)
+          {
+            i = 8;
+          }
+
+        t.boolArray[i].startHours = stoi(startTime1);
+        t.boolArray[i].endHours = stoi(endTime1);
+        t.boolArray[i].event = appointment;
+        t.boolArray[i].ampm = ampm;
+        t.storeInfo(t.boolArray[i]);
+
     }
 
     if (input == "2")
