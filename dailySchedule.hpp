@@ -5,6 +5,7 @@
 #include <list>
 using namespace std;
 
+
 struct timeInfo{
   int startHours;
   int startMins;
@@ -14,10 +15,6 @@ struct timeInfo{
   string ampm;
 };
 
-struct User{
-  string username;
-  list <timeInfo> allEvents;
-};
 
 class timeSlot
 {
@@ -25,10 +22,22 @@ private:
 
 public:
   timeSlot();
+
+  //instance
   timeInfo slot;
-  void storeInfo(timeInfo* list);
-  int freeTime(timeInfo* list);
+  int maxsize;
+  bool boolArray[];
+
+  //functions
+  void storeInfo(timeInfo slot);
+  bool scheduleArray(timeInfo slot);
+  int freeTime(timeInfo* slot);
   void conflicts();
   void recommendation();
 
+};
+
+struct User{
+  string username;
+  list <timeSlot> allEvents;
 };
