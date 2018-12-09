@@ -32,13 +32,16 @@ void getRecommendations(int i)
 }
 
 
-  void timeSlot::storeInfo(timeInfo slot)
+    void timeSlot::storeInfo(timeInfo slot)
   {
     cout << "Here is your schedule for today!" << endl;
 
     for(int i=0; i<8; i++)
     {
-      cout<< "At "<< boolArray[i].startHours << ", you have: " << boolArray[i].event << endl;
+      if(boolArray[i].occupied == true)
+      {
+        cout<< "At "<< boolArray[i].startHours << ", you have: " << boolArray[i].event << endl;
+      }
     }
 
   }
