@@ -8,13 +8,15 @@ using namespace std;
 
 struct timeInfo{
   int startHours;
-  int startMins;
   int endHours;
-  int endMins;
   string event;
   string ampm;
+  bool occupied;
+  // string startam;
+  // string startam;
+  // string endam;
+  // string endpm;
 };
-
 
 class timeSlot
 {
@@ -22,17 +24,21 @@ private:
 
 public:
   timeSlot();
+  // ~timeSlot();
 
   //instance
   timeInfo slot;
-  int maxsize;
-  bool boolArray[];
+  string fkey;
+  int fvalue;
+  timeInfo boolArray[8];
+  timeInfo eventArray[8];
 
   //functions
   void storeInfo(timeInfo slot);
   bool scheduleArray(timeInfo slot);
+  
+
   int freeTime(timeInfo* slot);
-  void conflicts();
   void recommendation();
 
 };
