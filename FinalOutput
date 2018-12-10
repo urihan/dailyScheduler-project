@@ -98,7 +98,27 @@ CU Women's Volleyball Game
 
 
 
-// FILE
+// FILE IO 
+
+
+// Output from the user input 
+
+Name: Yuri
+Start Time(hours): 8
+End Time(hours): 9
+AM/PM 
+Appointment: Math
+Start Time(hours): 9
+End Time(hours): 10
+AM/PM 
+Appointment: Physics
+Start Time(hours): 12
+End Time(hours): 1
+AM/PM 
+Appointment: Lunch
+
+
+// Schedule Recommendation 
 
 Here is an event that you could go to during your free time!
 Data Structures Colloquium
