@@ -38,7 +38,7 @@ public:
   void getRecommendations(int);
 
 };
- 
+
 struct User{
   string username;
   list <timeSlot> allEvents;
