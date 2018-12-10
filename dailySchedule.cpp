@@ -9,7 +9,7 @@ using namespace std;
 
 timeSlot::timeSlot(){
 
-  for(int i; i<8;i++){
+  for(int i=0; i<8;i++){
     boolArray[i].event = " ";
     boolArray[i].occupied = false;
     boolArray[i].startHours = 0;
@@ -180,22 +180,28 @@ int main()
 
       cout <<"What time (hours) is your appointment? " <<endl;
       getline(cin,startTime1);
-      // while (stoi(startTime1) != 8 || stoi(startTime1) != 9 ||stoi(startTime1) != 10 ||stoi(startTime1) != 11 ||stoi(startTime1) != 12 ||stoi(startTime1) != 1 ||stoi(startTime1) != 2 ||stoi(startTime1) != 3 || stoi(startTime1) != 4)
-      // {
-      //   cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
-      //   cout <<"What time (hours) is your appointment? " <<endl;
-      //   getline(cin, startTime1);
-      // }
+      while (stoi(startTime1) != 8 && stoi(startTime1) != 9 &&stoi(startTime1) != 10 &&stoi(startTime1) != 11 &&stoi(startTime1) != 12 &&stoi(startTime1) != 1 &&stoi(startTime1) != 2 &&stoi(startTime1) != 3 && stoi(startTime1) != 4)
+      {
+        cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
+        cout <<"What time (hours) is your appointment? " <<endl;
+        getline(cin, startTime1);
+
+      }
+
       user_scheduler <<"Start Time(hours): " <<startTime1 <<endl;
 
       cout <<"What time (hours) does your appointment end? " <<endl;
       getline(cin,endTime1);
-      // while (stoi(endTime1) != 8 || stoi(endTime1) != 9 ||stoi(endTime1) != 10 ||stoi(endTime1) != 11 ||stoi(endTime1) != 12 ||stoi(endTime1) != 1 ||stoi(endTime1) != 2 ||stoi(endTime1) != 3 ||stoi(endTime1) != 4)
-      // {
-      //   cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
-      //   cout <<"What time (hours) does your appointment end? " <<endl;
-      //   getline(cin, endTime1);
-      // }
+
+
+
+
+      while (stoi(endTime1) != 8 && stoi(endTime1) != 9 &&stoi(endTime1) != 10 &&stoi(endTime1) != 11 &&stoi(endTime1) != 12 &&stoi(endTime1) != 1 &&stoi(endTime1) != 2 &&stoi(endTime1) != 3 &&stoi(endTime1) != 4)
+      {
+        cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
+        cout <<"What time (hours) does your appointment end? " <<endl;
+        getline(cin, endTime1);
+      }
 
       user_scheduler <<"End Time(hours): " <<endTime1 <<endl;
 
@@ -221,7 +227,8 @@ int main()
           if (stoi(startTime1) == 11)
           {
             i = 3;
-          }if (stoi(startTime1) == 12)
+          }
+          if (stoi(startTime1) == 12)
           {
             i = 4;
           }
@@ -265,8 +272,6 @@ int main()
       t.scheduleArray();
     }
 
-
-
-} 
+}
 
 }
