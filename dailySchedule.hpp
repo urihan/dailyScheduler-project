@@ -28,17 +28,13 @@ public:
 
   //instance
   timeInfo slot;
-  string fkey;
-  int fvalue;
-  timeInfo boolArray[8];
-  timeInfo eventArray[8];
+  timeInfo boolArray[9];
+  timeInfo eventArray[9];
 
   //functions
   void storeInfo(timeInfo slot);
   void scheduleArray();
-
-
-  int freeTime(timeInfo* slot);
+  void setRecommendations();
   void getRecommendations(int);
 
 };
