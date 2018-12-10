@@ -103,8 +103,11 @@ void timeSlot::setRecommendations()
 }
 void timeSlot::getRecommendations(int i)
   {
+    ofstream user_recommendations("user_recommendations.txt");
     cout <<"Here is an event that you could go to during your free time!" <<endl;
-    cout <<"At "<< eventArray[i].startHours << ", go to: "<< eventArray[i].event <<endl <<endl;
+    cout <<eventArray[i].event <<endl;
+    user_recommendations <<"Here is an event that you could go to during your free time!" <<endl;
+    user_recommendations <<eventArray[i].event <<endl;
   }
 
 
