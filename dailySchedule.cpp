@@ -101,9 +101,12 @@ void timeSlot::setRecommendations()
     // eventArray[9].endHours= 6;
     // eventArray[9].ampm= "am";
 }
+
+ofstream user_recommendations("user_recommendations.txt");
+
 void timeSlot::getRecommendations(int i)
   {
-    ofstream user_recommendations("user_recommendations.txt");
+    //ofstream user_recommendations("user_recommendations.txt");
     cout <<"Here is an event that you could go to during your free time!" <<endl;
     cout <<eventArray[i].event <<endl;
     user_recommendations <<"Here is an event that you could go to during your free time!" <<endl;
@@ -112,22 +115,19 @@ void timeSlot::getRecommendations(int i)
 
 
 
-void timeSlot::scheduleArray()
-{
-      ofstream user_recommendations("user_recommendations.txt");
-
-  for(int i; i<8; i++)
+  void timeSlot::scheduleArray()
   {
-    if(boolArray[i].occupied == false)
+    for(int i = 0; i<9; i++)
     {
-      cout <<"You have a free hour at " <<boolArray[i].startHours <<"!" << endl;
-      getRecommendations(i);
-      user_recommendations <<"These are the events that you could attend: " <<endl;
-      user_recommendations << getRecommendations(i);
-
+      if(boolArray[i].occupied == false)
+      {
+        cout <<"You have a free hour at " <<eventArray[i].startHours <<"!" << endl;
+        getRecommendations(i);
+        user_recommendations <<endl;
+      }
     }
   }
-}
+
 
 
 // int ampmCalculation(timeInfo slot){
@@ -285,6 +285,7 @@ int main()
     {
       cout << "These are the events that you could attend" << endl;
       t.scheduleArray();
+      user_recommendations <<"Have a great time " <<name <<"!" <<endl;
     }
 
 }
