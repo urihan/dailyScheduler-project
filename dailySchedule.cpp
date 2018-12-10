@@ -112,18 +112,22 @@ void timeSlot::getRecommendations(int i)
 
 
 
-  void timeSlot::scheduleArray()
-  {
-    for(int i=0; i<9; i++)
-    {
-      if(boolArray[i].occupied == false)
-      {
+void timeSlot::scheduleArray()
+{
+      ofstream user_recommendations("user_recommendations.txt");
 
-        cout <<"You have a free hour at " <<eventArray[i].startHours <<"!" << endl;
-        getRecommendations(i);
-      }
+  for(int i; i<8; i++)
+  {
+    if(boolArray[i].occupied == false)
+    {
+      cout <<"You have a free hour at " <<boolArray[i].startHours <<"!" << endl;
+      getRecommendations(i);
+      user_recommendations <<"These are the events that you could attend: " <<endl;
+      user_recommendations << getRecommendations(i);
+
     }
   }
+}
 
 
 // int ampmCalculation(timeInfo slot){
