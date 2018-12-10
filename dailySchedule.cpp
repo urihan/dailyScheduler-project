@@ -9,7 +9,7 @@ using namespace std;
 
 timeSlot::timeSlot(){
 
-  for(int i=0; i<8;i++){
+  for(int i=0; i<9;i++){
     boolArray[i].event = " ";
     boolArray[i].occupied = false;
     boolArray[i].startHours = 0;
@@ -17,7 +17,6 @@ timeSlot::timeSlot(){
     boolArray[i].ampm=" ";
 
     eventArray[i].event = " ";
-    eventArray[i].occupied = false;
     eventArray[i].startHours = 0;
     eventArray[i].endHours=0;
     eventArray[i].ampm=" ";
@@ -28,7 +27,7 @@ void timeSlot::storeInfo(timeInfo slot)
 {
 cout << "Here is your schedule for today!" << endl;
 
-for(int i=0; i<8; i++)
+for(int i=0; i<9; i++)
 {
   if(boolArray[i].occupied == true)
   {
@@ -95,18 +94,24 @@ void timeSlot::setRecommendations()
     eventArray[8].startHours = 4;
     eventArray[8].endHours= 5;
     eventArray[8].ampm= "am";
+
+    // eventArray[9].event = "Swimming Team Olympics";
+    // eventArray[9].occupied = true;
+    // eventArray[9].startHours = 5;
+    // eventArray[9].endHours= 6;
+    // eventArray[9].ampm= "am";
 }
 void timeSlot::getRecommendations(int i)
   {
     cout <<"Here is an event that you could go to during your free time!" <<endl;
-    cout <<"At "<< eventArray[i].startHours << " go to: "<< eventArray[i].event <<endl <<endl;
+    cout <<"At "<< eventArray[i].startHours << ", go to: "<< eventArray[i].event <<endl <<endl;
   }
 
 
 
   void timeSlot::scheduleArray()
   {
-    for(int i=0; i<8; i++)
+    for(int i=0; i<9; i++)
     {
       if(boolArray[i].occupied == false)
       {
@@ -196,7 +201,7 @@ int main()
 
 
 
-      while (stoi(endTime1) != 8 && stoi(endTime1) != 9 &&stoi(endTime1) != 10 &&stoi(endTime1) != 11 &&stoi(endTime1) != 12 &&stoi(endTime1) != 1 &&stoi(endTime1) != 2 &&stoi(endTime1) != 3 &&stoi(endTime1) != 4)
+      while (stoi(endTime1) != 8 && stoi(endTime1) != 9 &&stoi(endTime1) != 10 &&stoi(endTime1) != 11 &&stoi(endTime1) != 12 &&stoi(endTime1) != 1 &&stoi(endTime1) != 2 &&stoi(endTime1) != 3 &&stoi(endTime1) != 4 && stoi(endTime1)!=5)
       {
         cout <<"Invalid input! Please enter the hour as a whole number (8,9,10).\n";
         cout <<"What time (hours) does your appointment end? " <<endl;
@@ -212,42 +217,45 @@ int main()
 
       user_scheduler <<"Appointment: " <<appointment <<endl;
 
-        if (stoi(startTime1) == 8)
+        if (stoi(startTime1) == 8 && stoi(endTime1)==9)
           {
             i = 0;
           }
-          if (stoi(startTime1) == 9)
+          if (stoi(startTime1) == 9 && stoi(endTime1)==10)
           {
             i = 1;
           }
-          if (stoi(startTime1) == 10)
+          if (stoi(startTime1) == 10 && stoi(endTime1)==11)
           {
             i = 2;
           }
-          if (stoi(startTime1) == 11)
+          if (stoi(startTime1) == 11 && stoi(endTime1)==12)
           {
             i = 3;
           }
-          if (stoi(startTime1) == 12)
+          if (stoi(startTime1) == 12 && stoi(endTime1)==1)
           {
             i = 4;
           }
-          if (stoi(startTime1) == 1)
+          if (stoi(startTime1) == 1&& stoi(endTime1)==2)
           {
             i = 5;
           }
-          if (stoi(startTime1) == 2)
+          if (stoi(startTime1) == 2&& stoi(endTime1)==3)
           {
             i = 6;
           }
-          if (stoi(startTime1) == 3)
+          if (stoi(startTime1) == 3&& stoi(endTime1)==4)
           {
+            cout <<"Its 7" <<endl;
             i = 7;
           }
-          if (stoi(startTime1) == 4)
+          else if (stoi(startTime1) == 4&& stoi(endTime1)==5)
           {
+            cout <<"Its 8" <<endl;
             i = 8;
           }
+
 
         t.boolArray[i].startHours = stoi(startTime1);
         t.boolArray[i].endHours = stoi(endTime1);
