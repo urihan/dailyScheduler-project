@@ -1,0 +1,122 @@
+Welcome to your daily scheduler! 
+Enter your name: 
+Yuri
+ ------------- Main Menu ------------- 
+1. Enter Info 
+2. View Schedule 
+3. Get Recommendations 
+4. Quit
+1
+Welcome, Yuri.
+Please enter your schedule: 
+What time (hours) is your appointment? 
+8
+What time (hours) does your appointment end? 
+9
+What do you have scheduled at 8 ?
+Math
+Here is your schedule for today!
+At 8, you have: Math
+ ------------- Main Menu ------------- 
+1. Enter Info 
+2. View Schedule 
+3. Get Recommendations 
+4. Quit
+1
+Welcome, Yuri.
+Please enter your schedule: 
+What time (hours) is your appointment? 
+9
+What time (hours) does your appointment end? 
+10
+What do you have scheduled at 9 ?
+Physics
+Here is your schedule for today!
+At 8, you have: Math
+At 9, you have: Physics
+ ------------- Main Menu ------------- 
+1. Enter Info 
+2. View Schedule 
+3. Get Recommendations 
+4. Quit
+1
+Welcome, Yuri.
+Please enter your schedule: 
+What time (hours) is your appointment? 
+12
+What time (hours) does your appointment end? 
+1
+What do you have scheduled at 12 ?
+Lunch
+Here is your schedule for today!
+At 8, you have: Math
+At 9, you have: Physics
+At 12, you have: Lunch
+ ------------- Main Menu ------------- 
+1. Enter Info 
+2. View Schedule 
+3. Get Recommendations 
+4. Quit
+2
+Welcome, Yuri.
+ ------------- Schedule ------------- 
+Here is your schedule for today!
+At 8, you have: Math
+At 9, you have: Physics
+At 12, you have: Lunch
+ ------------- Main Menu ------------- 
+1. Enter Info 
+2. View Schedule 
+3. Get Recommendations 
+4. Quit
+3
+These are the events that you could attend
+You have a free hour at 10!
+Here is an event that you could go to during your free time!
+Data Structures Colloquium
+You have a free hour at 11!
+Here is an event that you could go to during your free time!
+Rock Climbing Club
+You have a free hour at 1!
+Here is an event that you could go to during your free time!
+Cooking Club
+You have a free hour at 2!
+Here is an event that you could go to during your free time!
+Shayon Gupta's Office Hours (CSCI 2270)
+You have a free hour at 3!
+Here is an event that you could go to during your free time!
+CU Men's Basketball Game
+You have a free hour at 4!
+Here is an event that you could go to during your free time!
+CU Women's Volleyball Game
+ ------------- Main Menu ------------- 
+1. Enter Info 
+2. View Schedule 
+3. Get Recommendations 
+4. Quit
+4
+
+
+
+// FILE
+
+Here is an event that you could go to during your free time!
+Data Structures Colloquium
+
+Here is an event that you could go to during your free time!
+Rock Climbing Club
+
+Here is an event that you could go to during your free time!
+Cooking Club
+
+Here is an event that you could go to during your free time!
+Shayon Gupta's Office Hours (CSCI 2270)
+
+Here is an event that you could go to during your free time!
+CU Men's Basketball Game
+
+Here is an event that you could go to during your free time!
+CU Women's Volleyball Game
+
+Have a great time Yuri!
+
